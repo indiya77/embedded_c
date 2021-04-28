@@ -1,12 +1,16 @@
 #include <avr/io.h>
+#include <util/delay.h>
+
 #include "activity1.h"
+#include "activity2.h"
 
 int main(){
-    
-    void pin_init();
+    uint16_t data;
+    pin_init();
 
+    InitAdc();
     while(1){
-        void delay_loop();
+        activity1_loop();
+        data = ReadAdc(0);
     }
-    return 0;
 }
