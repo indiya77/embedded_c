@@ -9,11 +9,21 @@ void pin_init(){
     PORTC |= (1<<PC6); // set bit
 }
 
-void delay_loop(){
-    if (!((PIND&(1<<PD4)) || (PINC&(1<<PC6)))){
+void activity1_loop(){
+    if (!((PIND & (1<<PD4)) || (PINC & (1<<PC6)))){
         PORTB |= (1<<PB0); // switch ON LED
     }
     else{
         PORTB &= ~(1<<PB0); // switch OFF LED
 }
 }
+
+
+void activity_1(){
+    void pin_init();
+
+    while(1){
+        void delay_loop();
+    }
+}
+
