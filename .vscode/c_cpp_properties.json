@@ -14,7 +14,7 @@
             "compilerPath": "C:/Users/win10/Desktop/CodeBlocks/MinGW/bin/gcc.exe",
             "cStandard": "gnu11",
             "cppStandard": "gnu++98",
-            "intelliSenseMode": "windows-gcc-arm"
+            "intelliSenseMode": "${default}"
         }
     ],
     "version": 4
