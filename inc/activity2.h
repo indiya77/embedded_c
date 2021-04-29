@@ -10,6 +10,5 @@
 void InitAdc();
 uint16_t ReadAdc(uint8_t ch);
 void activity_2();
-void activity2_loop();
 
 #endif
