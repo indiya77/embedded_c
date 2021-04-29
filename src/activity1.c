@@ -1,29 +1,29 @@
 #include "activity1.h"
+#include <util/delay.h>
 
 void pin_init(){
-    DDRB |= (1<<PB0); // Set pin for LED
-    DDRD &= ~(1<<PD4); // clear bit
-    DDRC &= ~(1<<PC6); // clear bit
+    DDRB |= (1<<LED_PIN); // Set pin for LED
+    DDRD &= ~(1<<HEATER_PIN); // clear bit
+    DDRC &= ~(1<<DRIVER_PIN); // clear bit
 
-    PORTD |= (1<<PD4); // set bit
-    PORTC |= (1<<PC6); // set bit
+    PORTD |= (1<<HEATER_PIN); // set bit
+    PORTC |= (1<<DRIVER_PIN); // set bit
 }
 
 void activity1_loop(){
-    if (!((PIND & (1<<PD4)) || (PINC & (1<<PC6)))){
-        PORTB |= (1<<PB0); // switch ON LED
+    if (!((PIND & (1<<HEATER_PIN)) || (PINC & (1<<DRIVER_PIN)))){
+        LED_PORT |= (1<<LED_PIN); // switch ON LED
+        _delay_ms(200);
     }
     else{
-        PORTB &= ~(1<<PB0); // switch OFF LED
+        LED_PORT &= ~(1<<LED_PIN);
+        _delay_ms(200);
 }
 }
-
 
 void activity_1(){
-    void pin_init();
-
+    pin_init();
     while(1){
-        void delay_loop();
-    }
+        activity1_loop();}
 }
 
