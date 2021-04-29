@@ -23,7 +23,5 @@ void activity1_loop(){
 
 void activity_1(){
     pin_init();
-    while(1){
-        activity1_loop();}
 }
 

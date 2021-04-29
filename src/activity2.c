@@ -17,22 +17,12 @@ uint16_t ReadAdc(uint8_t ch){
         return(ADC);
         }
 
-void activity2_loop(){
-    uint16_t data;
+void activity_2(){
+    uint16_t data = 0;
     InitAdc();
     while(1){
+        activity1_loop();
         data = ReadAdc(0);
-        _delay_ms(200);
-    }
-    return;
-}
-
-void activity_2(){
-    if(!((PIND & (1<<HEATER_PIN)) || (PINC & (1<<LED_PIN)))){
-        activity2_loop();
-    }
-    else{
-        LED_PORT &= ~(1<<LED_PIN);
     }
 }
     
