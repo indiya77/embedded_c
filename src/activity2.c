@@ -18,12 +18,7 @@ uint16_t ReadAdc(uint8_t ch){
         }
 
 void activity_2(){
-    uint16_t data = 0;
     InitAdc();
-    while(1){
-        activity1_loop();
-        data = ReadAdc(0);
-    }
 }
     
 

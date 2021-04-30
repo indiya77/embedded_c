@@ -2,7 +2,7 @@
 #include <util/delay.h>
 
 void pin_init(){
-    DDRB |= (1<<LED_PIN); // Set pin for LED
+    DDRB |= (1<<LED_PIN); // set pin for LED
     DDRD &= ~(1<<HEATER_PIN); // clear bit
     DDRC &= ~(1<<DRIVER_PIN); // clear bit
 
