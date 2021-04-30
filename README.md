@@ -2,7 +2,7 @@
 
 # Heat Controller
 
-## Activity 1 in Action
+## Project in Action
 
 ![activity](simulation/working.png)<br/>
 
