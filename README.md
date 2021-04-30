@@ -1,6 +1,6 @@
 # Embedded C Programming Examples with Continuous Integration and Code Quality
 
-# Heat Controller
+# Seat Heating Application
 
 ## Project in Action
 
