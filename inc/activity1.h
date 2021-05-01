@@ -1,3 +1,14 @@
+/**
+ * @file activity1.h
+ * @author Indiya B Henly (indiyabhenly@gmail.com)
+ * @brief This contains all the necessary functions to switch on LED when both 
+ * the driver is seated and the heater is turned on
+ * @version 0.1
+ * @date 2021-05-01
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
 #ifndef _ACTIVITY1_
 #define _ACTIVITY1_
 
@@ -12,8 +23,20 @@
 
 #include <avr/io.h>
 
+/**
+ * @brief It initialises the pin as input and output pin
+ * 
+ */
 void pin_init();
+/**
+ * @brief It turns on LED when both the switches are turned ON,
+ * else LED turns OFF
+ */
 void activity1_loop();
+/**
+ * @brief This function initialises the pin and carries out Activity 1
+ * 
+ */
 void activity_1();
 
 #endif
